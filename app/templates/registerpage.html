@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Unibook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+    <div class="background_container">
+        <div class="top_container">
+            <a href="/">
+                <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+            </a>
+            <ul>
+                <li style="float:right; margin-right:20px"><a href="/login"><b>Sign in</b></a></li>
+                {%if login%}
+                <li style="float:right; margin-right:20px"><a href="/logout"><b>Log out</b></a></li>
+                {%endif%}
+            </ul>
+        </div>
+        <div class="small_container">
+            <div id="register">
+                <h1> Register </h1>
+                {% for mesg in get_flashed_messages() %}
+                <p class="warning"> {{mesg}} </p>
+                {% endfor %}
+                <form action="{{url_for('main.register')}}" method="POST">
+                    {{form.hidden_tag()}}
+                    {{form.fname.label}} {{form.fname()}}
+                    <br>
+                    {{form.lname.label}} {{form.lname()}}
+                    <br>
+                    {{form.email.label}} {{form.email()}}
+                    <br>
+                    {{form.password.label}} {{form.password()}}
+                    <br>
+                    {{form.submit()}}
+                </form>
+            </div>
+        </div>
+        <img class="large_icon" src="{{ url_for('static', filename='images/large_logo.png') }}" alt="logo">
+    </div>
+</body>
+
+</html>

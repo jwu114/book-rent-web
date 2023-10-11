@@ -1,0 +1,372 @@
+nav {
+    position: fixed;
+    float: left;
+    top: 0;
+    left: 0;
+    height: 65px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+
+    border-bottom: 1px solid #d3d3d3;
+    width: 100%;
+    z-index: 2;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.logo {
+    float: left;
+    padding-left: 30px;
+    width: 200px;
+}
+
+.search_bar {
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 900px;
+    height: 50px;
+}
+
+.parent>input:first-of-type {
+    padding-left: 15px;
+    width: 85%;
+    height: 40px;
+    border: 2px solid #df8244;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.parent>input:first-of-type:hover {
+    border: 2px solid #a94d0f;
+}
+
+.parent>input:last-of-type {
+    width: 10%;
+    height: 46px;
+    margin-left: 10px;
+    position: absolute;
+    background-color: #df8244;
+    border: 2px solid #df8244;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.banner {
+    max-width: 100%;
+    min-width: 80%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.book_container {
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.book_container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.book_container p {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text_container {
+    height: 30px;
+    margin-bottom: 40px;
+}
+
+.popular_books {
+    float: left;
+}
+
+.rented_books {
+    float: left;
+    margin-bottom: 35px;
+    width: 90%;
+}
+
+.view_all {
+    float: right;
+    color: black;
+    text-decoration: none;
+}
+
+.view_all:hover {
+    text-decoration: underline;
+}
+
+.search_results {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.search_results b {
+    font-size: 25px;
+    color: rgb(63, 62, 62);
+}
+
+li {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: gray;
+}
+
+.center {
+    text-align: center;
+}
+
+.profile_icon {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    vertical-align: middle;
+    width: 45px;
+}
+
+#sign_in,
+#register {
+    margin-top: 100px;
+    margin-left: 100px;
+    color: rgb(63, 62, 62);
+    background-color: #fff;
+}
+
+#sign_in h1,
+#register h1 {
+    margin-bottom: 30px;
+}
+
+#sign_in input[type=text],
+#sign_in input[type=password],
+#register input[type=text],
+#register input[type=password] {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border-color: rgb(63, 62, 62);
+}
+
+#sign_in input[type=submit],
+#register input[type=submit] {
+    width: 300px;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 18px 0;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #df8244;
+    border: none;
+}
+
+#register input[type=text]:nth-child(9) {
+    margin-left: 47px;
+}
+
+#sign_in input[type=text]:nth-child(3) {
+    margin-left: 50px;
+}
+
+.tag {
+    position: absolute;
+    right: 100px;
+    top: 10px;
+    width: 90px;
+    padding-top: 12px;
+    height: 22px;
+    margin-left: 10px;
+    background-color: #df8244;
+    border: 2px solid #df8244;
+    border-radius: 8px;
+    overflow: hidden;
+    outline: none;
+}
+
+.tag a{
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.tag li{
+    padding: 12px 18px;
+}
+
+.tag a:hover {
+    color: white;
+}
+
+
+.warning {
+    color: #df8244;
+}
+
+.top_container {
+    position: fixed;
+    float: left;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding-top: 20px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    z-index: 3;
+}
+
+.small_container {
+    position: absolute;
+    top: 0;
+    padding-top: 75px;
+    padding-left: 25px;
+    margin: 0;
+    width: 600px;
+    height: 90%;
+    max-width: 1400px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 2;
+}
+
+.background_container {
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    background-color: #f3f5f8;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+}
+
+.large_icon {
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 260px;
+    right: 260px;
+    width: 200px;
+    height: 200px;
+}
+
+.book_img {
+    margin-top: 40px;
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.book {
+    position: relative;
+    column-count: 2;
+    column-gap: 6%;
+    column-fill: balance;
+    top: 75px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1400px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+}
+
+.book h1{
+    padding-top: 70px;
+}
+
+.book p{
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.book a{
+    position: relative;
+    top: 30px;
+    width: 90px;
+    height: 42px;
+    padding: 6px;
+    background-color: #df8244;
+    border: 2px solid #df8244;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    outline: none;
+}
+
+.profile {
+    float: left;
+    position: relative;
+    column-count: 3;
+    column-gap: 5%;
+    column-fill: balance;
+    top: 50px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    width: 50%;
+    height: 90px;
+    padding-right: 50%;
+    max-width: 1400px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #d3d3d3;;
+    z-index: 1;
+}
+
+.profile h1{
+    color: rgb(63, 62, 62);
+}
+
+.profile p{
+    color: gray;
+}
+
+.profile_icon_large {
+    margin-left: 50px;
+    vertical-align: middle;
+    width: 75px;
+}
+
+.container {
+    position: relative;
+    top: 75px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1400px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Unibook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+
+    <nav>
+        <a href="/">
+            <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+        </a>
+        <div class="search_bar">
+            <form method="POST" class="parent">
+                <input type="text" name="search">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+        <ul>
+            <li style="float:right">
+                <a href="/profile">
+                    <img class="profile_icon" src="{{url_for('static', filename='images/profile_icon.png')}}"
+                        alt="profile icon">
+                </a>
+            </li>
+            {%if login%}
+            <li class="tag" style="float:right"><a href="/logout">Log out</a></li>
+            {%else%}
+            <li class="tag" style="float:right"><a href="/login">Sign in</a></li>
+            {%endif%}
+        </ul>
+    </nav>
+
+    <div class="book">
+        <img class="book_img" src="{{imageLink}}" alt="book image">
+        <h1>{{title}}</h1>
+        <p>Author: {{author}}</p>
+        <p>Year: {{year}}</p>
+        <p>Country: {{country}}</p>
+        <p>Language: {{language}}</p>
+        <p>Page Number: {{pages}}</p>
+        {%if rented%}
+        <a href="/rent/{{id}}">Unrent</a>
+        {%else%}
+        <a href="/rent/{{id}}">Rent</a>
+        {%endif%}
+    </div>
+</body>
+
+</html>

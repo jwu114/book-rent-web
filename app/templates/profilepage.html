@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Unibook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+
+    <nav>
+        <a href="/">
+            <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+        </a>
+        <div class="search_bar">
+            <form method="POST" class="parent">
+                <input type="text" name="search">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+        <ul>
+            <li style="float:right">
+                <a href="/profile">
+                    <img class="profile_icon" src="{{url_for('static', filename='images/profile_icon.png')}}"
+                        alt="profile icon">
+                </a>
+            </li>
+            <li class="tag" style="float:right"><a href="/logout">Log out</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="profile">
+            <img class="profile_icon_large" src="{{url_for('static', filename='images/profile_icon.png')}}"
+            alt="profile icon">
+            <h1>Name</h1>
+            <p>{{firstname}} {{lastname}}</p>
+            <h1>Email</h1>
+            <p>{{email}}</p>
+        </div>
+        <div class="text_container">
+			<h2 class="rented_books">Rented Book List</h2>
+		</div>
+        <div class="books">
+			{% for imageLink, title, id in ziplist %}
+			<div class="book_container">
+				<a href="/book/{{id}}">
+					<img src={{imageLink}} alt="book image">
+				</a>
+				<p>{{title}}</p>
+			</div>
+			{% endfor %}
+		</div>
+    </div>
+</body>
+
+</html>
